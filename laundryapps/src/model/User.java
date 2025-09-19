@@ -39,17 +39,16 @@ public class User {
 		boolean isLogin = false;
 		User user = new User();
 		user.setId("1");
-		user.setNama("fulan");
+		user.setNama("Fulan");
 		user.setUsername("fulan");
 		user.setPassword("12345");
 		
-		if(user.getUsername().equalsIgnoreCase(username)
-				&& user.getPassword().equalsIgnoreCase(password)) {
+		if(user.getUsername().equalsIgnoreCase(username) &&
+				user.getPassword().equalsIgnoreCase(password)) {
 			isLogin = true;
-		} else {
+		}else {
 			isLogin = false;
 		}
 		return isLogin;
 	}
-	
 }

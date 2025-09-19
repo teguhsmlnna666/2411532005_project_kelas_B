@@ -1,7 +1,7 @@
 package model;
 
 public class Order {
-	String id, id_costumer, id_service, id_user, total, tanggal, tanggal_selesai, status, status_pembayaran;
+	String id, id_customer, id_service, id_user, total, tanggal, tanggal_selesai, status, status_pembayaran;
 
 	public String getId() {
 		return id;
@@ -11,12 +11,12 @@ public class Order {
 		this.id = id;
 	}
 
-	public String getId_costumer() {
-		return id_costumer;
+	public String getId_customer() {
+		return id_customer;
 	}
 
-	public void setId_costumer(String id_costumer) {
-		this.id_costumer = id_costumer;
+	public void setId_customer(String id_customer) {
+		this.id_customer = id_customer;
 	}
 
 	public String getId_service() {
@@ -74,5 +74,6 @@ public class Order {
 	public void setStatus_pembayaran(String status_pembayaran) {
 		this.status_pembayaran = status_pembayaran;
 	}
+	
 	
 }
