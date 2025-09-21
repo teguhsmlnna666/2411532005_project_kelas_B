@@ -2,13 +2,13 @@ package table;
 
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import model.User;
+import model.Customer;
 
-public class TableUser extends AbstractTableModel {
-    List<User> ls;
-    private String[] columnNames = {"ID", "Name", "Username", "Password"};
+public class TableCustomer extends AbstractTableModel {
+    List<Customer> ls;
+    private String[] columnNames = {"ID", "Nama", "Alamat", "Nomor HP"};
 
-    public TableUser(List<User> ls) {
+    public TableCustomer(List<Customer> ls) {
         this.ls = ls;
     }
 
@@ -19,12 +19,12 @@ public class TableUser extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return columnNames.length;
+        return 4;
     }
 
     @Override
     public String getColumnName(int column) {
-        return columnNames[column]; 
+        return columnNames[column];
     }
 
     @Override
@@ -35,9 +35,9 @@ public class TableUser extends AbstractTableModel {
             case 1:
                 return ls.get(rowIndex).getNama();
             case 2:
-                return ls.get(rowIndex).getUsername();
+                return ls.get(rowIndex).getAlamat();
             case 3:
-                return ls.get(rowIndex).getPassword();
+                return ls.get(rowIndex).getNomorhp();
             default:
                 return null;
         }
