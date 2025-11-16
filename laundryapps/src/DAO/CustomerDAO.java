@@ -4,8 +4,8 @@ import java.util.List;
 import model.Customer;
 
 public interface CustomerDAO {
-	void save(Customer customer);
-	List<Customer> show();
+	public void save(Customer cs);
+	public void update(Customer cs);
 	public void delete(String id);
-	public void update(Customer customer);
+	public List<Customer> show();
 }

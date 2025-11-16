@@ -6,8 +6,8 @@ import model.Customer;
 
 public class TableCustomer extends AbstractTableModel {
     List<Customer> ls;
-    private String[] columnNames = {"ID", "Nama", "Alamat", "Nomor HP"};
-
+    private String[] columnNames = {"ID", "Nama", "Email", "Alamat", "HP"};
+    
     public TableCustomer(List<Customer> ls) {
         this.ls = ls;
     }
@@ -19,7 +19,7 @@ public class TableCustomer extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 4;
+        return 5;
     }
 
     @Override
@@ -35,9 +35,11 @@ public class TableCustomer extends AbstractTableModel {
             case 1:
                 return ls.get(rowIndex).getNama();
             case 2:
-                return ls.get(rowIndex).getAlamat();
+                return ls.get(rowIndex).getEmail();
             case 3:
-                return ls.get(rowIndex).getNomorhp();
+            	return ls.get(rowIndex).getAlamat();
+            case 4:
+                return ls.get(rowIndex).getHp();
             default:
                 return null;
         }
